@@ -1,0 +1,36 @@
+[
+  {
+    "name": "TransformVehicle",
+    "scriptFile": "VehicleHelper.dll",
+    "entryPoint": "contoso.functions.TransformVehicle.Run",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "vehicle",
+        "direction": "In",
+        "type": "workflowActionTrigger",
+        "properties": {}
+      }
+    ]
+  },
+  {
+    "name": "VehicleHelper",
+    "scriptFile": "VehicleHelper.dll",
+    "entryPoint": "contoso.functions.VehicleHelper.Run",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "zipCode",
+        "direction": "In",
+        "type": "workflowActionTrigger",
+        "properties": {}
+      }
+    ]
+  }
+]

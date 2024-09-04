@@ -1,0 +1,105 @@
+{
+  "Name": "TransformVehicle",
+  "ScriptFile": "VehicleHelper.dll",
+  "FunctionDirectory": null,
+  "EntryPoint": "contoso.functions.TransformVehicle.Run",
+  "Language": "net8",
+  "Properties": {},
+  "Bindings": [
+    {
+      "Name": "vehicle",
+      "Connection": null,
+      "Type": "workflowActionTrigger",
+      "Properties": {},
+      "Direction": "In",
+      "DataType": null,
+      "Cardinality": null,
+      "IsTrigger": true,
+      "IsReturn": false,
+      "Raw": null
+    }
+  ],
+  "InputBindings": [
+    {
+      "Name": "vehicle",
+      "Connection": null,
+      "Type": "workflowActionTrigger",
+      "Properties": {},
+      "Direction": "In",
+      "DataType": null,
+      "Cardinality": null,
+      "IsTrigger": true,
+      "IsReturn": false,
+      "Raw": null
+    }
+  ],
+  "OutputBindings": [],
+  "Trigger": {
+    "Name": "vehicle",
+    "Connection": null,
+    "Type": "workflowActionTrigger",
+    "Properties": {},
+    "Direction": "In",
+    "DataType": null,
+    "Cardinality": null,
+    "IsTrigger": true,
+    "IsReturn": false,
+    "Raw": null
+  },
+  "InputSchema": {
+    "type": "object",
+    "properties": {
+      "Brand": {
+        "type": "string"
+      },
+      "Model": {
+        "type": "string"
+      },
+      "Year": {
+        "type": "integer"
+      },
+      "Type": {
+        "type": "string",
+        "enum": [
+          "Car",
+          "Truck",
+          "Motorcycle"
+        ]
+      }
+    },
+    "required": [
+      "Brand",
+      "Model",
+      "Year",
+      "Type"
+    ]
+  },
+  "OutputSchema": {
+    "type": "object",
+    "properties": {
+      "Brand": {
+        "type": "string"
+      },
+      "Model": {
+        "type": "string"
+      },
+      "Year": {
+        "type": "integer"
+      },
+      "Type": {
+        "type": "string",
+        "enum": [
+          "Car",
+          "Truck",
+          "Motorcycle"
+        ]
+      }
+    },
+    "required": [
+      "Brand",
+      "Model",
+      "Year",
+      "Type"
+    ]
+  }
+}
